@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cafoor ZATCA QR & GCC VAT</title>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; width: 340px; margin: 0; background: #f5f6f8; color: #0a0b0d; }
+    header { background: #0a0b0d; color: #fff; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between; }
+    header span { font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+    header a { color: #ff795e; font-size: 11px; text-decoration: none; font-weight: 700; }
+    main { padding: 12px 14px; display: grid; gap: 12px; }
+    .card { background: #fff; border: 1px solid #e2e5ea; border-radius: 10px; padding: 10px 12px; }
+    label { display: block; font-size: 11px; font-weight: 700; color: #475569; margin-bottom: 4px; }
+    input, select, textarea { width: 100%; box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 8px; font-size: 12px; font-family: ui-monospace, monospace; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .out { margin-top: 8px; background: #0a0b0d; color: #fff; border-radius: 8px; padding: 8px 10px; font-family: ui-monospace, monospace; font-size: 11px; line-height: 1.6; }
+    .cta { display: block; text-align: center; background: #e83b1c; color: #fff; text-decoration: none; font-weight: 700; font-size: 12px; padding: 9px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <span>CAFOOR · ZATCA &amp; VAT</span>
+    <a href="https://cafoor.com/en/tools/free-invoice-generator?utm_source=chrome_ext" target="_blank" rel="noopener">Free Invoice →</a>
+  </header>
+  <main>
+    <div class="card">
+      <label for="amt">GCC VAT Calculator (Add / Extract)</label>
+      <div class="row">
+        <input id="amt" type="number" value="1000" step="0.01" />
+        <select id="rate">
+          <option value="15" selected>KSA 15%</option>
+          <option value="5">UAE / Oman 5%</option>
+          <option value="10">Bahrain 10%</option>
+          <option value="14">Egypt 14%</option>
+          <option value="16">Jordan 16%</option>
+        </select>
+      </div>
+      <div id="vatOut" class="out"></div>
+    </div>
+
+    <div class="card">
+      <label for="tlv">ZATCA TLV Base64 QR Decoder</label>
+      <textarea id="tlv" rows="2" placeholder="Paste ZATCA QR Base64 payload..."></textarea>
+      <div id="tlvOut" class="out" style="display:none"></div>
+    </div>
+
+    <a class="cta" href="https://cafoor.com/en/signup?utm_source=chrome_ext&utm_medium=popup" target="_blank" rel="noopener">
+      Automate ZATCA Phase 2 in Cafoor ERP (14-Day Free Trial)
+    </a>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

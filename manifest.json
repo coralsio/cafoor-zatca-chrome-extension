@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ZATCA QR Inspector & GCC VAT Calculator by Cafoor",
+  "short_name": "Cafoor ZATCA",
+  "version": "1.0.0",
+  "description": "Instantly decode Saudi ZATCA TLV Base64 QR codes and calculate GCC/MENA VAT (15%, 5%, 14%, 16%) right in Chrome.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Cafoor ZATCA QR & VAT Calculator",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "128": "icon128.png"
+  }
+}
